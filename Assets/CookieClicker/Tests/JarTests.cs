@@ -33,5 +33,16 @@ namespace CookieClicker.Tests
 
 			Assert.That(jar.Amount(), Is.EqualTo(1));
 		}
+
+		[Test]
+		public void EarnTwoCookies()
+		{
+			var jar = new Jar();
+
+			jar.Add();
+			jar.Add();
+
+			Assert.That(jar.Amount(), Is.EqualTo(2));
+		}
 	}
 }
