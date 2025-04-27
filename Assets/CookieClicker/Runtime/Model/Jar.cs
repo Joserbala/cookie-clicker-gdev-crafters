@@ -4,4 +4,9 @@ public class Jar
 	{
 		return true;
 	}
+
+	public void Add()
+	{
+
+	}
 }
