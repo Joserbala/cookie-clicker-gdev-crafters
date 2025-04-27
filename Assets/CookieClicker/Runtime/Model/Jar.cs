@@ -1,21 +1,22 @@
-using NUnit.Framework.Constraints;
-
-public class Jar
+namespace CookieClicker.Runtime.Model
 {
-	int cookies;
-
-	public bool IsEmpty()
+	public class Jar
 	{
-		return cookies == 0;
-	}
+		int cookies;
 
-	public void Add()
-	{
-		cookies++;
-	}
+		public bool IsEmpty()
+		{
+			return cookies == 0;
+		}
 
-	public int Amount()
-	{
-		return cookies;
+		public void Add()
+		{
+			cookies++;
+		}
+
+		public int Amount()
+		{
+			return cookies;
+		}
 	}
 }

@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using CookieClicker.Runtime.Model;
+using NUnit.Framework;
 
 namespace CookieClicker.Tests
 {
