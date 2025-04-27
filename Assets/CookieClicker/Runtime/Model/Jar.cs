@@ -1,3 +1,5 @@
+using NUnit.Framework.Constraints;
+
 public class Jar
 {
 	int cookies;
@@ -10,5 +12,10 @@ public class Jar
 	public void Add()
 	{
 		cookies++;
+	}
+
+	public int Amount()
+	{
+		return cookies;
 	}
 }

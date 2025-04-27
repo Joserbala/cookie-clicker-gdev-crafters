@@ -22,5 +22,15 @@ namespace CookieClicker.Tests
 
 			Assert.That(jar.IsEmpty(), Is.False);
 		}
+
+		[Test]
+		public void EarnOneCookie()
+		{
+			var jar = new Jar();
+
+			jar.Add();
+
+			Assert.That(jar.Amount(), Is.EqualTo(1));
+		}
 	}
 }
