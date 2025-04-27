@@ -1,12 +1,14 @@
 public class Jar
 {
+	int cookies;
+
 	public bool IsEmpty()
 	{
-		return true;
+		return cookies == 0;
 	}
 
 	public void Add()
 	{
-
+		cookies++;
 	}
 }
