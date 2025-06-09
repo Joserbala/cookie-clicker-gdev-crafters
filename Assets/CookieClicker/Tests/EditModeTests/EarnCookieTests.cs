@@ -16,7 +16,7 @@ namespace CookieClicker.Tests
 
 			sut.Execute();
 
-			Assert.That(doc.Amount(), Is.EqualTo(1));
+			Assert.That(doc.Amount, Is.EqualTo(1));
 		}
 
 		[Test]

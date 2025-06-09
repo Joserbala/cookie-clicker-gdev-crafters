@@ -31,7 +31,7 @@ namespace CookieClicker.Tests
 
 			jar.Add();
 
-			Assert.That(jar.Amount(), Is.EqualTo(1));
+			Assert.That(jar.Amount, Is.EqualTo(1));
 		}
 
 		[Test]
@@ -42,7 +42,7 @@ namespace CookieClicker.Tests
 			jar.Add();
 			jar.Add();
 
-			Assert.That(jar.Amount(), Is.EqualTo(2));
+			Assert.That(jar.Amount, Is.EqualTo(2));
 		}
 	}
 }

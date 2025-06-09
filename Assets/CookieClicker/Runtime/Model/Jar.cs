@@ -2,21 +2,17 @@ namespace CookieClicker.Runtime.Model
 {
 	public class Jar
 	{
-		int cookies;
+		public int Amount { get; private set; }
 
 		public bool IsEmpty()
 		{
-			return cookies == 0;
+			return Amount == 0;
 		}
 
 		public void Add()
 		{
-			cookies++;
+			Amount++;
 		}
 
-		public int Amount()
-		{
-			return cookies;
-		}
 	}
 }

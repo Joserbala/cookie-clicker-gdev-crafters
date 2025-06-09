@@ -16,7 +16,7 @@ namespace CookieClicker.Runtime.Presenter
 		public void Execute()
 		{
 			jar.Add();
-			view.Refresh(jar.Amount());
+			view.Refresh(jar.Amount);
 		}
 	}
 }
