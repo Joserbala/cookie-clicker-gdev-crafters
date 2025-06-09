@@ -43,14 +43,28 @@ namespace CookieClicker.Tests
 			Assert.That(doc2.Counter, Is.EqualTo(1));
 		}
 
+		[Test]
+		public void Easdnasdgn2()
+		{
+			var doc = new Jar();
+			var doc2 = new MockView();
+			var sut = new EarnCookie(doc, doc2);
+
+			sut.Execute();
+			sut.Execute();
+
+			Assert.That(doc2.Counter, Is.EqualTo(2));
+		}
+
 		public class MockView : ICookieCounterView
 		{
 			public bool hasBeenRefreshed = false;
-			public int Counter => 1;
+			public int Counter { get; set; }
 
-			public void Refresh()
+			public void Refresh(int amount)
 			{
 				hasBeenRefreshed = true;
+				Counter = amount;
 			}
 		}
 	}

@@ -8,7 +8,7 @@ namespace CookieClicker.Runtime.View
 	{
 		[SerializeField] Text text;
 
-		public void Refresh()
+		public void Refresh(int amount)
 		{
 
 		}

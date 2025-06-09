@@ -2,6 +2,6 @@
 {
 		public interface ICookieCounterView
 		{
-			void Refresh();
+			void Refresh(int amount);
 		}
 }
