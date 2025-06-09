@@ -59,7 +59,7 @@ namespace CookieClicker.Tests
 		public class MockView : ICookieCounterView
 		{
 			public bool hasBeenRefreshed = false;
-			public int Counter { get; set; }
+			public int Counter { get; private set; }
 
 			public void Refresh(int amount)
 			{

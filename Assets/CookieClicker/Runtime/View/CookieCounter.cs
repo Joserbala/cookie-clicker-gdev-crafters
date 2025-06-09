@@ -1,16 +1,16 @@
 ﻿using CookieClicker.Runtime.Presenter;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace CookieClicker.Runtime.View
 {
 	public class CookieCounter : MonoBehaviour, ICookieCounterView
 	{
-		[SerializeField] Text text;
+		[SerializeField] TMP_Text text;
 
 		public void Refresh(int amount)
 		{
-
+			text.text = amount.ToString();
 		}
 	}
 }
