@@ -6,7 +6,7 @@ namespace CookieClicker.Runtime.Presenter
 	{
 		readonly Jar jar;
 
-		public EarnCookie(Jar jar)
+		public EarnCookie(Jar jar, ICookieCounterView view)
 		{
 			this.jar = jar;
 		}

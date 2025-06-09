@@ -11,7 +11,8 @@ namespace CookieClicker.Tests
 		public void EarnCookieAddsOneCookieToJar()
 		{
 			var doc = new Jar();
-			var sut = new EarnCookie(doc);
+			var doc2 = new MockView();
+			var sut = new EarnCookie(doc, doc2);
 
 			sut.Execute();
 
@@ -23,16 +24,11 @@ namespace CookieClicker.Tests
 		{
 			var doc = new Jar();
 			var doc2 = new MockView();
-			var sut = new EarnCookie(doc);
+			var sut = new EarnCookie(doc, doc2);
 
 			sut.Execute();
 
 			Assert.That(doc2.hasBeenRefreshed, Is.EqualTo(true));
-		}
-
-		public interface ICookieCounterView
-		{
-			void Refresh();
 		}
 
 		public class MockView : ICookieCounterView
