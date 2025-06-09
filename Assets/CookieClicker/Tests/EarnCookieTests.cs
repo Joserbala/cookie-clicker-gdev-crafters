@@ -32,7 +32,7 @@ namespace CookieClicker.Tests
 		}
 
 		[Test]
-		public void Easdnasdgn()
+		public void ViewDisplays1Cookie()
 		{
 			var doc = new Jar();
 			var doc2 = new MockView();
@@ -44,7 +44,7 @@ namespace CookieClicker.Tests
 		}
 
 		[Test]
-		public void Easdnasdgn2()
+		public void ViewDisplays2Cookies()
 		{
 			var doc = new Jar();
 			var doc2 = new MockView();
