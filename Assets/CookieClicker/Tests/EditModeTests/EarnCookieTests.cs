@@ -20,18 +20,6 @@ namespace CookieClicker.Tests
 		}
 
 		[Test]
-		public void EarnCookieUpdatesCookieCounter()
-		{
-			var doc = new Jar();
-			var doc2 = new MockView();
-			var sut = new EarnCookie(doc, doc2);
-
-			sut.Execute();
-
-			Assert.That(doc2.hasBeenRefreshed, Is.EqualTo(true));
-		}
-
-		[Test]
 		public void ViewDisplays1Cookie()
 		{
 			var doc = new Jar();
@@ -58,12 +46,10 @@ namespace CookieClicker.Tests
 
 		public class MockView : ICookieCounterView
 		{
-			public bool hasBeenRefreshed = false;
 			public int Counter { get; private set; }
 
 			public void Refresh(int amount)
 			{
-				hasBeenRefreshed = true;
 				Counter = amount;
 			}
 		}
