@@ -21,5 +21,21 @@ namespace CookieClicker.Tests.PlayModeTests
 			Assert.That(UnityEngine.Object.FindAnyObjectByType<CookieCounter>().GetComponent<TMP_Text>().text,
 				Is.EqualTo("1"));
 		}
+
+		[UnityTest]
+		public IEnumerator ClickingThriceEarnsThreeCookies()
+		{
+			yield return SceneManager.LoadSceneAsync(0);
+			yield return null;
+
+			var button = UnityEngine.Object.FindAnyObjectByType<Button>();
+
+			button.onClick.Invoke();
+			button.onClick.Invoke();
+			button.onClick.Invoke();
+
+			var text = UnityEngine.Object.FindAnyObjectByType<CookieCounter>().GetComponent<TMP_Text>().text;
+			Assert.That(text, Is.EqualTo("3"));
+		}
 	}
 }
