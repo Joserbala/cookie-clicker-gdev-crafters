@@ -11,7 +11,7 @@ namespace CookieClicker.Tests
 		public void EarnCookieAddsOneCookieToJar()
 		{
 			var doc = new Jar();
-			var doc2 = new MockView();
+			var doc2 = new MockCookieCounterView();
 			var sut = new EarnCookie(doc, doc2);
 
 			sut.Execute();
@@ -23,7 +23,7 @@ namespace CookieClicker.Tests
 		public void ViewDisplays1Cookie()
 		{
 			var doc = new Jar();
-			var doc2 = new MockView();
+			var doc2 = new MockCookieCounterView();
 			var sut = new EarnCookie(doc, doc2);
 
 			sut.Execute();
@@ -35,7 +35,7 @@ namespace CookieClicker.Tests
 		public void ViewDisplays2Cookies()
 		{
 			var doc = new Jar();
-			var doc2 = new MockView();
+			var doc2 = new MockCookieCounterView();
 			var sut = new EarnCookie(doc, doc2);
 
 			sut.Execute();
@@ -53,16 +53,6 @@ namespace CookieClicker.Tests
 			sut.Execute(1.2f);
 
 			Assert.That(doc.Amount, Is.EqualTo(1));
-		}
-
-		public class MockView : ICookieCounterView
-		{
-			public int Counter { get; private set; }
-
-			public void Refresh(int amount)
-			{
-				Counter = amount;
-			}
 		}
 	}
 
