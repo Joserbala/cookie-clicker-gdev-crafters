@@ -5,6 +5,7 @@ namespace CookieClicker.Runtime.Model
 	public class Jar
 	{
 		public int Amount { get; private set; }
+		float timePassed;
 
 		public bool IsEmpty()
 		{
@@ -23,7 +24,8 @@ namespace CookieClicker.Runtime.Model
 
 		public void SecondsHavePassed(float f)
 		{
-			Amount += (int)f;
+			timePassed += f;
+			Amount += (int)timePassed;
 		}
 	}
 }

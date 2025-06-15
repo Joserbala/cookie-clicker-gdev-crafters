@@ -66,5 +66,16 @@ namespace CookieClicker.Tests
 
 			Assert.That(jar.Amount, Is.EqualTo(amountOfCookies));
 		}
+
+		[Test]
+		public void sdgsg()
+		{
+			var jar = new Jar();
+
+			jar.SecondsHavePassed(0.6f);
+			jar.SecondsHavePassed(0.6f);
+
+			Assert.That(jar.Amount, Is.EqualTo(1));
+		}
 	}
 }
