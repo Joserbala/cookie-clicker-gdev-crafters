@@ -46,7 +46,7 @@ namespace CookieClicker.Tests
 		}
 
 		[Test]
-		public void Asdgasfghinkafgh()
+		public void CookieIsAddedWhenOneSecondHasPassed()
 		{
 			var jar = new Jar();
 
@@ -55,34 +55,16 @@ namespace CookieClicker.Tests
 			Assert.That(jar.Amount, Is.EqualTo(1));
 		}
 
-		[Test]
-		public void Asdgasfghinkafgh2()
+		[TestCase(3f, 3)]
+		[TestCase(3.9f, 3)]
+		[TestCase(3.2f, 3)]
+		public void ThreeCookiesAreAddedWhenThreeSecondsHavePassed(float timePassed, int amountOfCookies)
 		{
 			var jar = new Jar();
 
-			jar.SecondsHavePassed(3f);
+			jar.SecondsHavePassed(timePassed);
 
-			Assert.That(jar.Amount, Is.EqualTo(3));
-		}
-
-		[Test]
-		public void Asdgasfghinkafgh3()
-		{
-			var jar = new Jar();
-
-			jar.SecondsHavePassed(3.9f);
-
-			Assert.That(jar.Amount, Is.EqualTo(3));
-		}
-
-		[Test]
-		public void Asdgasfghinkafgh4()
-		{
-			var jar = new Jar();
-
-			jar.SecondsHavePassed(3.2f);
-
-			Assert.That(jar.Amount, Is.EqualTo(3));
+			Assert.That(jar.Amount, Is.EqualTo(amountOfCookies));
 		}
 	}
 }
