@@ -1,7 +1,7 @@
 ﻿using CookieClicker.Runtime.Model;
 using NUnit.Framework;
 
-namespace CookieClicker.Tests
+namespace CookieClicker.Tests.EditModeTests
 {
 	[TestFixture]
 	public class JarTests
