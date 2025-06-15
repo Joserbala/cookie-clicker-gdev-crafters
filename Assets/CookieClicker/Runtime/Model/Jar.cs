@@ -1,3 +1,5 @@
+using System;
+
 namespace CookieClicker.Runtime.Model
 {
 	public class Jar
@@ -17,6 +19,11 @@ namespace CookieClicker.Runtime.Model
 		public void OneSecondHasPassed()
 		{
 			Amount++;
+		}
+
+		public void SecondsHavePassed(float f)
+		{
+			Amount = Amount + (int)f;
 		}
 	}
 }
