@@ -26,6 +26,7 @@ namespace CookieClicker.Runtime.Model
 		{
 			timePassed += f;
 			Amount += (int)timePassed;
+			timePassed -= Amount;
 		}
 	}
 }
