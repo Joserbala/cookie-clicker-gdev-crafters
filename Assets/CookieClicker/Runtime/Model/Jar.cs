@@ -23,7 +23,7 @@ namespace CookieClicker.Runtime.Model
 
 		public void SecondsHavePassed(float f)
 		{
-			Amount = Amount + (int)f;
+			Amount += (int)f;
 		}
 	}
 }
