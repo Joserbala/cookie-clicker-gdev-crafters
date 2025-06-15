@@ -64,5 +64,25 @@ namespace CookieClicker.Tests
 
 			Assert.That(jar.Amount, Is.EqualTo(3));
 		}
+
+		[Test]
+		public void Asdgasfghinkafgh3()
+		{
+			var jar = new Jar();
+
+			jar.SecondsHavePassed(3.9f);
+
+			Assert.That(jar.Amount, Is.EqualTo(3));
+		}
+
+		[Test]
+		public void Asdgasfghinkafgh4()
+		{
+			var jar = new Jar();
+
+			jar.SecondsHavePassed(3.2f);
+
+			Assert.That(jar.Amount, Is.EqualTo(3));
+		}
 	}
 }
