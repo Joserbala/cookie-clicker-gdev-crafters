@@ -14,5 +14,9 @@ namespace CookieClicker.Runtime.Model
 			Amount++;
 		}
 
+		public void OneSecondHasPassed()
+		{
+			Amount++;
+		}
 	}
 }
