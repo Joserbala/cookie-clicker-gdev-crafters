@@ -44,6 +44,17 @@ namespace CookieClicker.Tests
 			Assert.That(doc2.Counter, Is.EqualTo(2));
 		}
 
+		[Test]
+		public void PassTime()
+		{
+			var doc = new Jar();
+			var sut = new PassTime(doc);
+
+			sut.Execute(1.2f);
+
+			Assert.That(doc.Amount, Is.EqualTo(1));
+		}
+
 		public class MockView : ICookieCounterView
 		{
 			public int Counter { get; private set; }
@@ -52,6 +63,21 @@ namespace CookieClicker.Tests
 			{
 				Counter = amount;
 			}
+		}
+	}
+
+	public class PassTime
+	{
+		readonly Jar jar;
+
+		public PassTime(Jar jar)
+		{
+			this.jar = jar;
+		}
+
+		public void Execute(float time)
+		{
+			jar.SecondsHavePassed(time);
 		}
 	}
 }
