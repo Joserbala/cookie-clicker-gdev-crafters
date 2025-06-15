@@ -67,26 +67,16 @@ namespace CookieClicker.Tests
 			Assert.That(jar.Amount, Is.EqualTo(amountOfCookies));
 		}
 
-		[Test]
-		public void sdgsg()
+		[TestCase(0.6f, 1)]
+		[TestCase(1.6f, 3)]
+		public void CookiesAreAddedWhenTimePassesInMultipleIncrements(float timeIncrement, int amountOfCookies)
 		{
 			var jar = new Jar();
 
-			jar.SecondsHavePassed(0.6f);
-			jar.SecondsHavePassed(0.6f);
+			jar.SecondsHavePassed(timeIncrement);
+			jar.SecondsHavePassed(timeIncrement);
 
-			Assert.That(jar.Amount, Is.EqualTo(1));
-		}
-
-		[Test]
-		public void sdgsg2()
-		{
-			var jar = new Jar();
-
-			jar.SecondsHavePassed(1.6f);
-			jar.SecondsHavePassed(1.6f);
-
-			Assert.That(jar.Amount, Is.EqualTo(3));
+			Assert.That(jar.Amount, Is.EqualTo(amountOfCookies));
 		}
 	}
 }
