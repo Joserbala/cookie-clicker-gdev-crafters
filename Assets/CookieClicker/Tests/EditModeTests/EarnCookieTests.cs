@@ -69,7 +69,7 @@ namespace CookieClicker.Tests.EditModeTests
 		}
 
 		[Test]
-		public void rgsfgh()
+		public void AfterPassingTimeMultipleTimesViewDisplaysUpdatedCounter()
 		{
 			var doc = new Jar();
 			var doc2 = new MockCookieCounterView();
