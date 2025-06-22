@@ -72,15 +72,18 @@ namespace CookieClicker.Tests.EditModeTests
 	public class PassTime
 	{
 		readonly Jar jar;
+		readonly ICookieCounterView doc2;
 
 		public PassTime(Jar jar, ICookieCounterView doc2)
 		{
 			this.jar = jar;
+			this.doc2 = doc2;
 		}
 
 		public void Execute(float time)
 		{
 			jar.SecondsHavePassed(time);
+			doc2.Refresh(jar.Amount);
 		}
 	}
 }
