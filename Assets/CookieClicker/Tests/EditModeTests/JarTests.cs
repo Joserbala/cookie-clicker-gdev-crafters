@@ -80,15 +80,26 @@ namespace CookieClicker.Tests.EditModeTests
 		}
 
 		[Test]
-		public void rgsfgh()
+		public void GivenJarWithCookies_WhenTimePasses_CookiesAreAdded()
+		{
+			var jar = JarWithCookies(5);
+			jar.SecondsHavePassed(1.2f);
+			jar.SecondsHavePassed(1.2f);
+			jar.SecondsHavePassed(1.2f);
+
+			Assert.That(jar.Amount, Is.EqualTo(8));
+		}
+
+		static Jar JarWithCookies(int initialAmount)
 		{
 			var jar = new Jar();
 
-			jar.SecondsHavePassed(1.2f);
-			jar.SecondsHavePassed(1.2f);
-			jar.SecondsHavePassed(1.2f);
+			for (var i = 0; i < initialAmount; i++)
+			{
+				jar.Add();
+			}
 
-			Assert.That(jar.Amount, Is.EqualTo(3));
+			return jar;
 		}
 	}
 }
