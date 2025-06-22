@@ -2,6 +2,7 @@
 using CookieClicker.Runtime.View;
 using NUnit.Framework;
 using TMPro;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 using UnityEngine.UI;
@@ -33,6 +34,18 @@ namespace CookieClicker.Tests.PlayModeTests
 			button.onClick.Invoke();
 			button.onClick.Invoke();
 			button.onClick.Invoke();
+
+			var text = UnityEngine.Object.FindAnyObjectByType<CookieCounter>().GetComponent<TMP_Text>().text;
+			Assert.That(text, Is.EqualTo("3"));
+		}
+
+		[UnityTest]
+		public IEnumerator ThreeCookiesAreAddedWhenThreeSecondsAndAHalfHavePassed()
+		{
+			yield return SceneManager.LoadSceneAsync(0);
+			yield return null;
+
+			yield return new WaitForSeconds(3.5f);
 
 			var text = UnityEngine.Object.FindAnyObjectByType<CookieCounter>().GetComponent<TMP_Text>().text;
 			Assert.That(text, Is.EqualTo("3"));
