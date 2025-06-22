@@ -69,7 +69,7 @@ namespace CookieClicker.Tests.EditModeTests
 
 		[TestCase(0.6f, 1)]
 		[TestCase(1.6f, 3)]
-		public void CookiesAreAddedWhenTimePassesInMultipleIncrements(float timeIncrement, int amountOfCookies)
+		public void CookiesAreAddedWhenTimePassesIn2Increments(float timeIncrement, int amountOfCookies)
 		{
 			var jar = new Jar();
 
@@ -77,6 +77,18 @@ namespace CookieClicker.Tests.EditModeTests
 			jar.SecondsHavePassed(timeIncrement);
 
 			Assert.That(jar.Amount, Is.EqualTo(amountOfCookies));
+		}
+
+		[Test]
+		public void rgsfgh()
+		{
+			var jar = new Jar();
+
+			jar.SecondsHavePassed(1.2f);
+			jar.SecondsHavePassed(1.2f);
+			jar.SecondsHavePassed(1.2f);
+
+			Assert.That(jar.Amount, Is.EqualTo(3));
 		}
 	}
 }

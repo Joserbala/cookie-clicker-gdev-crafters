@@ -25,8 +25,9 @@ namespace CookieClicker.Runtime.Model
 		public void SecondsHavePassed(float f)
 		{
 			timePassed += f;
-			Amount += (int)timePassed;
-			timePassed -= Amount;
+			var CookiesToAdd = (int)timePassed;
+			Amount += CookiesToAdd;
+			timePassed -= CookiesToAdd;
 		}
 	}
 }
