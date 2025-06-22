@@ -50,5 +50,17 @@ namespace CookieClicker.Tests.PlayModeTests
 			var text = UnityEngine.Object.FindAnyObjectByType<CookieCounter>().GetComponent<TMP_Text>().text;
 			Assert.That(text, Is.EqualTo("3"));
 		}
+
+		[UnityTest]
+		public IEnumerator AutoClickerDoesntStartUntilUpgradeIsPurchased()
+		{
+			yield return SceneManager.LoadSceneAsync(0);
+			yield return null;
+
+			yield return new WaitForSeconds(3.5f);
+
+			var text = UnityEngine.Object.FindAnyObjectByType<CookieCounter>().GetComponent<TMP_Text>().text;
+			Assert.That(text, Is.EqualTo("0"));
+		}
 	}
 }
