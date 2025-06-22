@@ -67,5 +67,19 @@ namespace CookieClicker.Tests.EditModeTests
 
 			Assert.That(doc2.Counter, Is.EqualTo(1));
 		}
+
+		[Test]
+		public void rgsfgh()
+		{
+			var doc = new Jar();
+			var doc2 = new MockCookieCounterView();
+			var sut = new PassTime(doc, doc2);
+
+			sut.Execute(1.2f);
+			sut.Execute(1.2f);
+			sut.Execute(1.2f);
+
+			Assert.That(doc2.Counter, Is.EqualTo(3));
+		}
 	}
 }
