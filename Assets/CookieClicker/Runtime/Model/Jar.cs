@@ -6,6 +6,7 @@ namespace CookieClicker.Runtime.Model
 	{
 		public int Amount { get; private set; }
 		float timePassed;
+		bool isAutoclickerPurchased;
 
 		public bool IsEmpty()
 		{
@@ -24,6 +25,9 @@ namespace CookieClicker.Runtime.Model
 
 		public void SecondsHavePassed(float f)
 		{
+			if (!isAutoclickerPurchased)
+				return;
+
 			timePassed += f;
 			var CookiesToAdd = (int)timePassed;
 			Amount += CookiesToAdd;
