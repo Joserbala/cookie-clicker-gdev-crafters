@@ -6,7 +6,7 @@ namespace CookieClicker.Runtime.Model
 	{
 		public int Amount { get; private set; }
 		float timePassed;
-		bool isAutoclickerPurchased;
+		public bool isAutoclickerPurchased;
 
 		public bool IsEmpty()
 		{
