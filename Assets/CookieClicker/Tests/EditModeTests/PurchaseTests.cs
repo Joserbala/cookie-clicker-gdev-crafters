@@ -1,4 +1,5 @@
 using CookieClicker.Runtime.Model;
+using CookieClicker.Runtime.Presenter;
 using NUnit.Framework;
 
 namespace CookieClicker.Tests.EditModeTests
@@ -15,21 +16,6 @@ namespace CookieClicker.Tests.EditModeTests
 			sut.Execute();
 
 			Assert.That(doc.isAutoclickerPurchased);
-		}
-	}
-
-	public class PurchaseAutoclicker
-	{
-		readonly Jar jar;
-
-		public PurchaseAutoclicker(Jar jar)
-		{
-			this.jar = jar;
-		}
-
-		public void Execute()
-		{
-			jar.PurchaseAutoclicker();
 		}
 	}
 }
