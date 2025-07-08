@@ -13,12 +13,9 @@ namespace CookieClicker.Runtime.View
 		[SerializeField] Button cookieButton;
 		PassTime passTime;
 
-		void Awake()
+		public void Initialize(EarnCookie earnCookie, PassTime inPassTime)
 		{
-			var jar = new Jar();
-			var earnCookie = new EarnCookie(jar, this);
-
-			passTime = new PassTime(jar, this);
+			passTime = inPassTime;
 			cookieButton.onClick.AddListener(earnCookie.Execute);
 		}
 
