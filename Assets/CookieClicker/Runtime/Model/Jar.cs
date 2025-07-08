@@ -29,9 +29,14 @@ namespace CookieClicker.Runtime.Model
 				return;
 
 			timePassed += f;
-			var CookiesToAdd = (int)timePassed;
-			Amount += CookiesToAdd;
-			timePassed -= CookiesToAdd;
+			var cookiesToAdd = (int)timePassed;
+			Amount += cookiesToAdd;
+			timePassed -= cookiesToAdd;
+		}
+
+		public void PurchaseAutoclicker()
+		{
+			isAutoclickerPurchased = true;
 		}
 	}
 }

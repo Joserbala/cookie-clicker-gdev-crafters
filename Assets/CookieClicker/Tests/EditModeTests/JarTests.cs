@@ -61,6 +61,7 @@ namespace CookieClicker.Tests.EditModeTests
 		public void ThreeCookiesAreAddedWhenThreeSecondsHavePassed(float timePassed, int amountOfCookies)
 		{
 			var jar = new Jar();
+			jar.PurchaseAutoclicker();
 
 			jar.SecondsHavePassed(timePassed);
 
@@ -73,6 +74,8 @@ namespace CookieClicker.Tests.EditModeTests
 		{
 			var jar = new Jar();
 
+			jar.PurchaseAutoclicker();
+
 			jar.SecondsHavePassed(timeIncrement);
 			jar.SecondsHavePassed(timeIncrement);
 
@@ -83,6 +86,9 @@ namespace CookieClicker.Tests.EditModeTests
 		public void GivenJarWithCookies_WhenTimePasses_CookiesAreAdded()
 		{
 			var jar = JarWithCookies(5);
+
+			jar.PurchaseAutoclicker();
+
 			jar.SecondsHavePassed(1.2f);
 			jar.SecondsHavePassed(1.2f);
 			jar.SecondsHavePassed(1.2f);
