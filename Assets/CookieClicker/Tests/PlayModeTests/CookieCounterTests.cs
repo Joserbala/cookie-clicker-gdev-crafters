@@ -17,9 +17,9 @@ namespace CookieClicker.Tests.PlayModeTests
 			yield return SceneManager.LoadSceneAsync(0);
 			yield return null;
 
-			UnityEngine.Object.FindAnyObjectByType<Button>().onClick.Invoke();
+			GameObject.Find("EarnCookie").GetComponent<Button>().onClick.Invoke();
 
-			Assert.That(UnityEngine.Object.FindAnyObjectByType<CookieCounter>().GetComponent<TMP_Text>().text,
+			Assert.That(Object.FindAnyObjectByType<CookieCounter>().GetComponent<TMP_Text>().text,
 				Is.EqualTo("1"));
 		}
 
@@ -29,13 +29,13 @@ namespace CookieClicker.Tests.PlayModeTests
 			yield return SceneManager.LoadSceneAsync(0);
 			yield return null;
 
-			var button = UnityEngine.Object.FindAnyObjectByType<Button>();
+			var button = GameObject.Find("EarnCookie").GetComponent<Button>();
 
 			button.onClick.Invoke();
 			button.onClick.Invoke();
 			button.onClick.Invoke();
 
-			var text = UnityEngine.Object.FindAnyObjectByType<CookieCounter>().GetComponent<TMP_Text>().text;
+			var text = Object.FindAnyObjectByType<CookieCounter>().GetComponent<TMP_Text>().text;
 			Assert.That(text, Is.EqualTo("3"));
 		}
 
@@ -47,7 +47,7 @@ namespace CookieClicker.Tests.PlayModeTests
 
 			yield return new WaitForSeconds(3.5f);
 
-			var text = UnityEngine.Object.FindAnyObjectByType<CookieCounter>().GetComponent<TMP_Text>().text;
+			var text = Object.FindAnyObjectByType<CookieCounter>().GetComponent<TMP_Text>().text;
 			Assert.That(text, Is.EqualTo("3"));
 		}
 
@@ -59,8 +59,12 @@ namespace CookieClicker.Tests.PlayModeTests
 
 			yield return new WaitForSeconds(3.5f);
 
-			var text = UnityEngine.Object.FindAnyObjectByType<CookieCounter>().GetComponent<TMP_Text>().text;
+			var text = Object.FindAnyObjectByType<CookieCounter>().GetComponent<TMP_Text>().text;
 			Assert.That(text, Is.EqualTo("0"));
 		}
+	}
+
+	public class PurchaseAutoclickerButton : MonoBehaviour
+	{
 	}
 }
