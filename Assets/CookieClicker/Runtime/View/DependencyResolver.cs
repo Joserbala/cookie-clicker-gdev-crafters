@@ -15,6 +15,10 @@ namespace CookieClicker.Runtime.View
 			var passTime = new PassTime(jar, cookieCounter);
 
 			cookieCounter.Initialize(earnCookie, passTime);
+
+			var purchaseAutoclickerButton = FindAnyObjectByType<PurchaseAutoclickerButton>();
+			var purchaseAutoclicker = new PurchaseAutoclicker(jar);
+			purchaseAutoclickerButton.Initialize(purchaseAutoclicker);
 		}
 	}
 }

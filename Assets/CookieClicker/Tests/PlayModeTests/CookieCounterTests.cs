@@ -45,6 +45,8 @@ namespace CookieClicker.Tests.PlayModeTests
 			yield return SceneManager.LoadSceneAsync(0);
 			yield return null;
 
+			Object.FindAnyObjectByType<PurchaseAutoclickerButton>().GetComponent<Button>().onClick.Invoke();
+
 			yield return new WaitForSeconds(3.5f);
 
 			var text = Object.FindAnyObjectByType<CookieCounter>().GetComponent<TMP_Text>().text;
@@ -62,9 +64,5 @@ namespace CookieClicker.Tests.PlayModeTests
 			var text = Object.FindAnyObjectByType<CookieCounter>().GetComponent<TMP_Text>().text;
 			Assert.That(text, Is.EqualTo("0"));
 		}
-	}
-
-	public class PurchaseAutoclickerButton : MonoBehaviour
-	{
 	}
 }
