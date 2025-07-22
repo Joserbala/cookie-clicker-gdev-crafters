@@ -16,7 +16,7 @@ namespace CookieClicker.Runtime.View
 		public void Initialize(EarnCookie earnCookie, PassTime inPassTime)
 		{
 			passTime = inPassTime;
-			earnCookieButton.cookieButton.onClick.AddListener(earnCookie.Execute);
+			earnCookieButton.Initialize(earnCookie);
 		}
 
 		public void Refresh(int amount)
