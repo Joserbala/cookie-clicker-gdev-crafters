@@ -17,7 +17,7 @@ namespace CookieClicker.Tests.PlayModeTests
 			yield return SceneManager.LoadSceneAsync(0);
 			yield return null;
 
-			GameObject.Find("EarnCookie").GetComponent<Button>().onClick.Invoke();
+			Object.FindAnyObjectByType<EarnCookieButton>().GetComponent<Button>().onClick.Invoke();
 
 			Assert.That(Object.FindAnyObjectByType<CookieCounter>().GetComponent<TMP_Text>().text,
 				Is.EqualTo("1"));
@@ -29,7 +29,7 @@ namespace CookieClicker.Tests.PlayModeTests
 			yield return SceneManager.LoadSceneAsync(0);
 			yield return null;
 
-			var button = GameObject.Find("EarnCookie").GetComponent<Button>();
+			var button = Object.FindAnyObjectByType<EarnCookieButton>().GetComponent<Button>();
 
 			button.onClick.Invoke();
 			button.onClick.Invoke();
