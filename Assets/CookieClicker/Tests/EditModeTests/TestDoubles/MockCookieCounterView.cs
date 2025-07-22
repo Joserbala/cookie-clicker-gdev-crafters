@@ -1,6 +1,6 @@
 using CookieClicker.Runtime.Presenter;
 
-namespace CookieClicker.Tests.EditModeTests
+namespace CookieClicker.Tests.EditModeTests.TestDoubles
 {
 	public class MockCookieCounterView : ICookieCounterView
 	{

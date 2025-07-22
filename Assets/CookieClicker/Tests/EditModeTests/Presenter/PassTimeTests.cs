@@ -1,5 +1,6 @@
 ﻿using CookieClicker.Runtime.Model;
 using CookieClicker.Runtime.Presenter;
+using CookieClicker.Tests.EditModeTests.TestDoubles;
 using NUnit.Framework;
 
 namespace CookieClicker.Tests.EditModeTests.Presenter
