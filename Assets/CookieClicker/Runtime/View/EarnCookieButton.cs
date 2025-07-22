@@ -6,7 +6,7 @@ namespace CookieClicker.Runtime.View
 {
 	public class EarnCookieButton : MonoBehaviour
 	{
-		[SerializeField] public Button cookieButton;
+		[SerializeField] Button cookieButton;
 
 		public void Initialize(EarnCookie earnCookie)
 		{
