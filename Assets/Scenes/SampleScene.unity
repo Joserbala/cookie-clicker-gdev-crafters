@@ -345,6 +345,7 @@ GameObject:
   - component: {fileID: 445763190}
   - component: {fileID: 445763189}
   - component: {fileID: 445763188}
+  - component: {fileID: 445763191}
   m_Layer: 5
   m_Name: EarnCookie
   m_TagString: Untagged
@@ -454,6 +455,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445763186}
   m_CullTransparentMesh: 1
+--- !u!114 &445763191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445763186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1d94fe82174485dbe76c44a7e7cf52f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cookieButton: {fileID: 445763188}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,7 +975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1317702645}
-  cookieButton: {fileID: 445763188}
+  earnCookieButton: {fileID: 445763191}
 --- !u!1 &1826826240
 GameObject:
   m_ObjectHideFlags: 0
