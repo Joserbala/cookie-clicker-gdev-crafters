@@ -2,7 +2,7 @@ using CookieClicker.Runtime.Model;
 using CookieClicker.Runtime.Presenter;
 using NUnit.Framework;
 
-namespace CookieClicker.Tests.EditModeTests
+namespace CookieClicker.Tests.EditModeTests.Presenter
 {
 	[TestFixture]
 	public class PurchaseTests
