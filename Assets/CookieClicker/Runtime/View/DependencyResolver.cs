@@ -11,14 +11,14 @@ namespace CookieClicker.Runtime.View
 			var jar = new Jar();
 			var cookieCounter = FindAnyObjectByType<CookieCounter>();
 			var earnCookieButton = FindAnyObjectByType<EarnCookieButton>();
-			var asFsdg = FindAnyObjectByType<ASFsdg>();
+			var clock = FindAnyObjectByType<UnityClock>();
 			var earnCookie = new EarnCookie(jar, cookieCounter);
 
 			earnCookieButton.Initialize(earnCookie);
 
 			var passTime = new PassTime(jar, cookieCounter);
 
-			asFsdg.Initialize(passTime);
+			clock.Initialize(passTime);
 
 			var purchaseAutoclickerButton = FindAnyObjectByType<PurchaseAutoclickerButton>();
 			var purchaseAutoclicker = new PurchaseAutoclicker(jar);

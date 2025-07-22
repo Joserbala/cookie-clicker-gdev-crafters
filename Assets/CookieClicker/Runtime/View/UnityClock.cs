@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace CookieClicker.Runtime.View
 {
-	public class ASFsdg : MonoBehaviour
+	public class UnityClock : MonoBehaviour
 	{
 		PassTime passTime;
 
