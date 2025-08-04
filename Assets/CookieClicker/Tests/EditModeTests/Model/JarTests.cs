@@ -85,7 +85,7 @@ namespace CookieClicker.Tests.EditModeTests.Model
 		[Test]
 		public void GivenJarWithCookies_WhenTimePasses_CookiesAreAdded()
 		{
-			var jar = JarWithCookies(5);
+			var jar = new Jar().WithCookies(5);
 
 			jar.PurchaseAutoclicker();
 
@@ -94,18 +94,6 @@ namespace CookieClicker.Tests.EditModeTests.Model
 			jar.SecondsHavePassed(1.2f);
 
 			Assert.That(jar.Amount, Is.EqualTo(8));
-		}
-
-		static Jar JarWithCookies(int initialAmount)
-		{
-			var jar = new Jar();
-
-			for (var i = 0; i < initialAmount; i++)
-			{
-				jar.Add();
-			}
-
-			return jar;
 		}
 	}
 }
