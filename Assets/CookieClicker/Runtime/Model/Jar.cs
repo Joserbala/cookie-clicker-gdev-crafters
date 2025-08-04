@@ -1,4 +1,5 @@
 using System;
+using log4net.Appender;
 
 namespace CookieClicker.Runtime.Model
 {
@@ -11,7 +12,6 @@ namespace CookieClicker.Runtime.Model
 
 		public Jar()
 		{
-
 		}
 
 		public Jar(int autoclickerPrice)
@@ -47,6 +47,11 @@ namespace CookieClicker.Runtime.Model
 
 		public void PurchaseAutoclicker()
 		{
+			if (Amount < AutoclickerPrice)
+			{
+				throw new InvalidOperationException();
+			}
+
 			isAutoclickerPurchased = true;
 		}
 	}
