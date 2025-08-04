@@ -28,5 +28,16 @@ namespace CookieClicker.Tests.EditModeTests.Presenter
 
 			Assert.That(!doc.isAutoclickerPurchased);
 		}
+
+		[Test]
+		public void AutoclickerCanBePurchasedWithEnoughCookies()
+		{
+			var doc = new Jar(3).WithCookies(3);
+			var sut = new PurchaseAutoclicker(doc);
+
+			sut.Execute();
+
+			Assert.That(doc.isAutoclickerPurchased);
+		}
 	}
 }
