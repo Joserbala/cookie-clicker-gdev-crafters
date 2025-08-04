@@ -13,7 +13,10 @@ namespace CookieClicker.Runtime.Presenter
 
 		public void Execute()
 		{
-			jar.PurchaseAutoclicker();
+			if (jar.Amount >= jar.AutoclickerPrice)
+			{
+				jar.PurchaseAutoclicker();
+			}
 		}
 	}
 }
