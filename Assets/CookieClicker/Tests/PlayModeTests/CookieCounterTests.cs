@@ -3,6 +3,7 @@ using CookieClicker.Runtime.View;
 using NUnit.Framework;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 using UnityEngine.UI;
@@ -45,7 +46,8 @@ namespace CookieClicker.Tests.PlayModeTests
 			yield return SceneManager.LoadSceneAsync(0);
 			yield return null;
 
-			Object.FindAnyObjectByType<PurchaseAutoclickerButton>().GetComponent<Button>().onClick.Invoke();
+			var button = Object.FindAnyObjectByType<PurchaseAutoclickerButton>().GetComponent<Button>();
+			ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
 
 			yield return new WaitForSeconds(3.5f);
 
