@@ -18,7 +18,9 @@ namespace CookieClicker.Tests.PlayModeTests
 			yield return SceneManager.LoadSceneAsync(0);
 			yield return null;
 
-			Object.FindAnyObjectByType<EarnCookieButton>().GetComponent<Button>().onClick.Invoke();
+			var button = Object.FindAnyObjectByType<EarnCookieButton>().GetComponent<Button>();
+			ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
+
 
 			Assert.That(Object.FindAnyObjectByType<CookieCounter>().GetComponent<TMP_Text>().text,
 				Is.EqualTo("1"));
@@ -32,9 +34,9 @@ namespace CookieClicker.Tests.PlayModeTests
 
 			var button = Object.FindAnyObjectByType<EarnCookieButton>().GetComponent<Button>();
 
-			button.onClick.Invoke();
-			button.onClick.Invoke();
-			button.onClick.Invoke();
+			ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
+			ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
+			ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
 
 			var text = Object.FindAnyObjectByType<CookieCounter>().GetComponent<TMP_Text>().text;
 			Assert.That(text, Is.EqualTo("3"));
