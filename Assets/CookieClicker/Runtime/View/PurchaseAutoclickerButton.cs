@@ -10,6 +10,7 @@ namespace CookieClicker.Runtime.View
 
 		public void Initialize(PurchaseAutoclicker purchaseAutoclicker)
 		{
+			button.interactable = false;
 			button.onClick.AddListener(purchaseAutoclicker.Execute);
 		}
 	}

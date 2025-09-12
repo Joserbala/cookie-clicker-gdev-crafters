@@ -11,15 +11,14 @@ namespace CookieClicker.Tests.PlayModeTests
 	public class PurchaseButtonTests
 	{
 		[UnityTest]
-		public IEnumerator Sasdgafsdg()
+		public IEnumerator AutoclickerButtonIsNotInteractableByDefault()
 		{
-
 			yield return SceneManager.LoadSceneAsync(0);
 			yield return null;
 
 			var autoClickerButton = Object.FindAnyObjectByType<PurchaseAutoclickerButton>().GetComponent<Button>();
 
-			Assert.That(autoClickerButton.enabled, Is.False);
+			Assert.That(autoClickerButton.interactable, Is.False);
 		}
 	}
 }
