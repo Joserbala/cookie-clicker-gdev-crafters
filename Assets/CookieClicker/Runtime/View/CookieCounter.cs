@@ -1,10 +1,9 @@
-﻿using CookieClicker.Runtime.Presenter;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 namespace CookieClicker.Runtime.View
 {
-	public class CookieCounter : MonoBehaviour, ICookieCounterView
+	public class CookieCounter : MonoBehaviour
 	{
 		[SerializeField] TMP_Text text;
 

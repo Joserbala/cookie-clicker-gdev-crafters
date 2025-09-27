@@ -1,6 +1,6 @@
 ﻿namespace CookieClicker.Runtime.Presenter
 {
-		public interface ICookieCounterView
+		public interface IsdgsdgsdgView
 		{
 			void Refresh(int amount);
 		}

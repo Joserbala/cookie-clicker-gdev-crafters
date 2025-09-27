@@ -14,7 +14,6 @@ namespace CookieClicker.Tests.PlayModeTests
 		public IEnumerator PurchaseAutoclickerButtonIsNotInteractableByDefault()
 		{
 			yield return SceneManager.LoadSceneAsync(0);
-			yield return null;
 
 			var button = Object.FindAnyObjectByType<PurchaseAutoclickerButton>().GetComponent<Button>();
 

@@ -5,9 +5,9 @@ namespace CookieClicker.Runtime.Presenter
 	public class PassTime
 	{
 		readonly Jar jar;
-		readonly ICookieCounterView view;
+		readonly IsdgsdgsdgView view;
 
-		public PassTime(Jar jar, ICookieCounterView view)
+		public PassTime(Jar jar, IsdgsdgsdgView view)
 		{
 			this.jar = jar;
 			this.view = view;
