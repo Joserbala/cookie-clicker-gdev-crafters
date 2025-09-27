@@ -4,4 +4,6 @@
 
 ## Features
 - Mostrar precio de autoclicker.
-- Aumentar las galletas por segundo.
+- Desactivar botón de comprar si se tiene la mejora.
+- Aumentar las galletas por segundo en un nuevo botón.
+- Aumentar las galletas ganadas por click.
