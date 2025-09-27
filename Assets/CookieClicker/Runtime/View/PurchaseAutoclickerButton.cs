@@ -8,6 +8,11 @@ namespace CookieClicker.Runtime.View
 	{
 		[SerializeField] Button button;
 
+		public void Refresh(int currentCookieAmount, int purchasePrice)
+		{
+			button.interactable = currentCookieAmount >= purchasePrice;
+		}
+
 		public void Initialize(PurchaseAutoclicker purchaseAutoclicker)
 		{
 			button.onClick.AddListener(purchaseAutoclicker.Execute);

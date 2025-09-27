@@ -1,3 +1,4 @@
+using CookieClicker.Runtime.Model;
 using CookieClicker.Runtime.Presenter;
 
 namespace CookieClicker.Tests.EditModeTests.TestDoubles
@@ -6,9 +7,9 @@ namespace CookieClicker.Tests.EditModeTests.TestDoubles
 	{
 		public int Counter { get; private set; }
 
-		public void Refresh(int amount)
+		public void Refresh(Jar jar)
 		{
-			Counter = amount;
+			Counter = jar.Amount;
 		}
 	}
 }

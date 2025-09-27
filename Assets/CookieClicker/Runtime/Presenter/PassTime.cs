@@ -16,7 +16,7 @@ namespace CookieClicker.Runtime.Presenter
 		public void Execute(float time)
 		{
 			jar.SecondsHavePassed(time);
-			view.Refresh(jar.Amount);
+			view.Refresh(jar);
 		}
 	}
 }

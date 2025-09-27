@@ -1,7 +1,9 @@
-﻿namespace CookieClicker.Runtime.Presenter
+﻿using CookieClicker.Runtime.Model;
+
+namespace CookieClicker.Runtime.Presenter
 {
 		public interface IsdgsdgsdgView
 		{
-			void Refresh(int amount);
+			void Refresh(Jar jar);
 		}
 }
