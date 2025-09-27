@@ -2,7 +2,7 @@
 
 namespace CookieClicker.Runtime.Presenter
 {
-		public interface IsdgsdgsdgView
+		public interface IGameView
 		{
 			void Refresh(Jar jar);
 		}

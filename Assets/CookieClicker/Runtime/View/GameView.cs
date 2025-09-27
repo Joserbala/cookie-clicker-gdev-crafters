@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace CookieClicker.Runtime.View
 {
-	public class GameView : MonoBehaviour, IsdgsdgsdgView
+	public class GameView : MonoBehaviour, IGameView
 	{
 		public void Refresh(Jar jar)
 		{

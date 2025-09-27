@@ -3,7 +3,7 @@ using CookieClicker.Runtime.Presenter;
 
 namespace CookieClicker.Tests.EditModeTests.TestDoubles
 {
-	public class MockCookieCounterView : IsdgsdgsdgView
+	public class MockCookieCounterView : IGameView
 	{
 		public int Counter { get; private set; }
 
