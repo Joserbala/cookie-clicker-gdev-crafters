@@ -26,7 +26,7 @@ namespace CookieClicker.Tests.EditModeTests.Presenter
 
 			sut.Execute();
 
-			Assert.That(!doc.isAutoclickerPurchased);
+			Assert.That(doc.isAutoclickerPurchased, Is.False);
 		}
 
 		[Test]
