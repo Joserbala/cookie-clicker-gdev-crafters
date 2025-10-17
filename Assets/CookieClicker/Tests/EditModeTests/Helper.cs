@@ -13,5 +13,17 @@ namespace CookieClicker.Tests.EditModeTests
 
 			return jar;
 		}
+
+		public static Jar WithAutoclicker(this Jar jar)
+		{
+			for (var i = 0; i < jar.AutoclickerPrice; i++)
+			{
+				jar.Add();
+			}
+
+			jar.PurchaseAutoclicker();
+
+			return jar;
+		}
 	}
 }
