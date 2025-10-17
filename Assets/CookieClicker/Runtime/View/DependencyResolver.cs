@@ -18,7 +18,7 @@ namespace CookieClicker.Runtime.View
 			var earnCookie = new EarnCookie(jar, gameView);
 			var passTime = new PassTime(jar, gameView);
 
-			gameView.Initialize();
+			gameView.Initialize(jar);
 			clock.Initialize(passTime);
 			earnCookieButton.Initialize(earnCookie);
 			purchaseAutoclickerButton.Initialize(purchaseAutoclicker);

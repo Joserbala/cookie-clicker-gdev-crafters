@@ -20,7 +20,7 @@ namespace CookieClicker.Runtime.Presenter
 
 			if (jar.Amount != amountBeforeTimePassing)
 			{
-				view.Refresh(jar);
+				view.Refresh();
 			}
 		}
 	}

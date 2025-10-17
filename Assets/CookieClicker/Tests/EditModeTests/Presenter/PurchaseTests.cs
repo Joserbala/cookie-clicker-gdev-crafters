@@ -12,7 +12,7 @@ namespace CookieClicker.Tests.EditModeTests.Presenter
 		public void PurchaseAutoclicker()
 		{
 			var doc = new Jar();
-			var doc2 = new MockCookieCounterView();
+			var doc2 = new MockCookieCounterView(doc);
 			var sut = new PurchaseAutoclicker(doc, doc2);
 
 			sut.Execute();
@@ -24,7 +24,7 @@ namespace CookieClicker.Tests.EditModeTests.Presenter
 		public void AutoclickerCantBePurchasedWithoutEnoughCookies()
 		{
 			var doc = new Jar(3);
-			var doc2 = new MockCookieCounterView();
+			var doc2 = new MockCookieCounterView(doc);
 			var sut = new PurchaseAutoclicker(doc, doc2);
 
 			sut.Execute();
@@ -36,7 +36,7 @@ namespace CookieClicker.Tests.EditModeTests.Presenter
 		public void AutoclickerCanBePurchasedWithEnoughCookies()
 		{
 			var doc = new Jar(3).WithCookies(3);
-			var doc2 = new MockCookieCounterView();
+			var doc2 = new MockCookieCounterView(doc);
 			var sut = new PurchaseAutoclicker(doc, doc2);
 
 			sut.Execute();
