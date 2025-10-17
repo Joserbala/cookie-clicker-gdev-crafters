@@ -11,7 +11,7 @@ namespace CookieClicker.Runtime.View
 		public void Initialize(Jar jar)
 		{
 			this.jar = jar;
-			FindFirstObjectByType<CookieCounter>().Refresh(0);
+			Refresh();
 		}
 
 		public void Refresh()
