@@ -14,7 +14,7 @@ namespace CookieClicker.Runtime.View
 			var purchaseAutoclickerButton = FindAnyObjectByType<PurchaseAutoclickerButton>();
 
 			var jar = new Jar(3);
-			var purchaseAutoclicker = new PurchaseAutoclicker(jar);
+			var purchaseAutoclicker = new PurchaseAutoclicker(jar, gameView);
 			var earnCookie = new EarnCookie(jar, gameView);
 			var passTime = new PassTime(jar, gameView);
 

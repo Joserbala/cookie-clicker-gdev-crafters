@@ -1,5 +1,6 @@
 using CookieClicker.Runtime.Model;
 using CookieClicker.Runtime.Presenter;
+using CookieClicker.Tests.EditModeTests.TestDoubles;
 using NUnit.Framework;
 
 namespace CookieClicker.Tests.EditModeTests.Presenter
@@ -11,7 +12,8 @@ namespace CookieClicker.Tests.EditModeTests.Presenter
 		public void PurchaseAutoclicker()
 		{
 			var doc = new Jar();
-			var sut = new PurchaseAutoclicker(doc);
+			var doc2 = new MockCookieCounterView();
+			var sut = new PurchaseAutoclicker(doc, doc2);
 
 			sut.Execute();
 
@@ -22,7 +24,8 @@ namespace CookieClicker.Tests.EditModeTests.Presenter
 		public void AutoclickerCantBePurchasedWithoutEnoughCookies()
 		{
 			var doc = new Jar(3);
-			var sut = new PurchaseAutoclicker(doc);
+			var doc2 = new MockCookieCounterView();
+			var sut = new PurchaseAutoclicker(doc, doc2);
 
 			sut.Execute();
 
@@ -33,7 +36,8 @@ namespace CookieClicker.Tests.EditModeTests.Presenter
 		public void AutoclickerCanBePurchasedWithEnoughCookies()
 		{
 			var doc = new Jar(3).WithCookies(3);
-			var sut = new PurchaseAutoclicker(doc);
+			var doc2 = new MockCookieCounterView();
+			var sut = new PurchaseAutoclicker(doc, doc2);
 
 			sut.Execute();
 
